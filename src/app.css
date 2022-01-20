@@ -1,0 +1,21 @@
+body {
+  background-color: cadetblue;
+  font-family: "Trirong", serif;
+}
+.appBox {
+  background-color: cornsilk;
+  width: 500px;
+  height: 300px;
+  border: 2px solid;
+  border-radius: 10px;
+  margin: auto;
+}
+.locationBtn {
+  margin: auto;
+  ;
+}
+.weatherBox {
+  text-align: center;
+  width: 450px;
+  height: 150px;
+}
