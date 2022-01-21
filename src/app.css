@@ -1,11 +1,12 @@
 body {
-  background-color: cadetblue;
-  font-family: "Trirong", serif;
+  /* background-color: cadetblue; */
+  background-image: url("./media/clouds.jpg");  
+  /* font-family: "Trirong", serif; */
 }
 .appBox {
   background-color: cornsilk;
-  width: 500px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   border: 2px solid;
   border-radius: 10px;
   margin: auto;
@@ -16,6 +17,6 @@ body {
 }
 .weatherBox {
   text-align: center;
-  width: 450px;
-  height: 150px;
+  width: 350px;
+  height: 350px;
 }

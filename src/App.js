@@ -31,7 +31,7 @@ export default function App(){
   return (
     
       <Box className="appBox">
-        {data !== undefined ? 
+        {data[0] !== undefined ? 
         <Weather weatherData={data} />
         :
         <></>
