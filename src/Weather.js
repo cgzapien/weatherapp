@@ -10,7 +10,7 @@ export default function Weather({weatherData}){
    <Box className="weatherBox">
     
       <div>
-        <img alt="weathericon" src={`http://openweathermap.org/img/wn/${weatherData[0].current.weather[0].icon}@2x.png`}/>
+        <img alt="weathericon" src={`https://openweathermap.org/img/wn/${weatherData[0].current.weather[0].icon}@2x.png`}/>
         <p>{weatherData[0].current.weather[0].description}</p>
       </div>
       <Typography>City: {weatherData[0].timezone.slice(8)}</Typography>
