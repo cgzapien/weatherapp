@@ -26,6 +26,9 @@ body {
   width: 350px;
   overflow: auto;
 }
+.currentWeather {
+  display: flex;
+}
 @media screen and (max-width: 800px) {
   .appBox {
     width: 350px;
