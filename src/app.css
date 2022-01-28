@@ -6,17 +6,28 @@ body {
 .appBox {
   background-color: cornsilk;
   width: 450px;
-  height: 450px;
+  height: 600px;
   border: 2px solid;
   border-radius: 10px;
   margin: auto;
 }
-.locationBtn {
-  margin: auto;
-  ;
+.btnContainer {
+  display: flex;
+  justify-content: center;
 }
 .weatherBox {
+  margin: auto;
   text-align: center;
   width: 350px;
   height: 350px;
+}
+.forecast {
+  display: flex;
+  width: 350px;
+  overflow: auto;
+}
+@media screen and (max-width: 800px) {
+  .appBox {
+    width: 350px;
+  }
 }
