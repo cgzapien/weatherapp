@@ -1,10 +1,8 @@
 import { Box, Card, Paper, Typography } from "@mui/material";
 import React from "react";
 export default function Weather({weatherData}){
-  console.log('weatherData: ', weatherData);
   const sunrise = new Date(weatherData[0].current.sunrise * 1000).toLocaleTimeString("en-US")
   const sunset = new Date(weatherData[0].current.sunset * 1000).toLocaleTimeString("en-US")
- 
   return (
    <Box className="weatherBox">
     
@@ -26,21 +24,19 @@ export default function Weather({weatherData}){
           const date = new Date(weather.dt * 1000)
           const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
           const dayNumber = date.getDate()
-          
           const day = weekday[date.getDay()]
-          console.log(weather.temp.day);
           return (
             <div>
-              <Typography>{day} {dayNumber}</Typography>
+              <Typography key={day}>{day} {dayNumber}</Typography>
               <Typography>{Math.floor(weather.temp.day)}&#xb0;F</Typography>
-              <Typography>{weather.weather.map(sky => {
+              {weather.weather.map(sky => {
                 return (
                   <>
-                    <img alt="weathericon" src={`https://openweathermap.org/img/wn/${sky.icon}@2x.png`}/>
-                    <Typography>{sky.main}</Typography>
+                    <img key={sky.main} alt="weathericon" src={`https://openweathermap.org/img/wn/${sky.icon}@2x.png`}/>
+                    <Typography >{sky.main}</Typography>
                   </>
                 )
-              })}</Typography>
+              })}
             </div>
           )
         })}
