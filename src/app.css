@@ -11,8 +11,9 @@ body {
   border-radius: 10px;
   margin: auto;
 }
-.btnContainer {
+.locationContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 .weatherBox {
@@ -23,12 +24,15 @@ body {
 }
 .forecast {
   display: flex;
+  justify-content: space-evenly;
   width: 350px;
   overflow: auto;
 }
 .currentWeather {
   display: flex;
+  justify-content: space-evenly;
 }
+
 @media screen and (max-width: 800px) {
   .appBox {
     width: 350px;
