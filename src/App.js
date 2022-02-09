@@ -21,7 +21,7 @@ export default function App(){
   };
   const handleZipCode = (e) => {
     e.preventDefault()
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=0b5f9ec4960e4fcd9fe184625221901&q=${zipCode.zipcode}&days=7&aqi=no&alerts=no`)
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=0b5f9ec4960e4fcd9fe184625221901&q=${zipCode.zipcode}&days=7&aqi=no&alerts=no`)
     .then(res => {
       setData(() => [res.data])
     
