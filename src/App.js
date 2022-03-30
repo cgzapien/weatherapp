@@ -9,10 +9,6 @@ export default function App(){
   const [zipCode, setZipCode] = useState({
     zipcode: ""
   })
-  const [coords, setCoords] = useState({
-    lat: "",
-    long: ""
-  })
   const handleZipCodeChange = (e) => {
     const { name, value } = e.target
     setZipCode(prevState => ({
@@ -28,12 +24,6 @@ export default function App(){
     })
     .catch(err => console.log(err))
   }
-//   useEffect(()=> {      
-//     axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.long}&units=imperial&appid=627a4c28ee22bae543d7ff8be2663f20`)
-//       .then(res => setData(() => [res.data]))
-//       .catch(err => console.log(err))
-      
-// }, [coords]) 
   return (
     
       <Box className="appBox">
@@ -60,7 +50,6 @@ export default function App(){
             variant="contained"
             type="submit"
             >Enter Zip Code</Button>
-
           </Box>
         <br/>
         </div>
@@ -68,7 +57,6 @@ export default function App(){
         }
         <br/>
       </Box>
-
     
   )
 }

@@ -1,10 +1,6 @@
 import { Box, Card, Paper, Typography } from "@mui/material";
 import React from "react";
 export default function Weather({weatherData}){
-  console.log('weatherData: ', weatherData);
-  // const sunrise = new Date(weatherData[0].forecastday[0].sunrise * 1000).toLocaleTimeString("en-US")
-  // console.log('sunrise: ', sunrise);
-  // const sunset = new Date(weatherData[0].city.sunset * 1000).toLocaleTimeString("en-US")
   return (
    <Box className="weatherBox">
     
@@ -26,7 +22,7 @@ export default function Weather({weatherData}){
           const date = new Date(weather.date_epoch * 1000)
           const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
           const dayNumber = date.getDate()
-          const day = weekday[date.getDay()]
+          const day = weekday[date.getUTCDay()]
           return (
             <div key={day} >
               <Typography >{day}<br/>{weather.date.slice(5)}</Typography>
