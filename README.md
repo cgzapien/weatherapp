@@ -3,6 +3,12 @@ A web application where the user can get data regarding the weather in their loc
 
 https://checkyourweatherapp.herokuapp.com/
 
+## Installation
+- Clone repo
+- cd into weatherapp folder
+- npm install
+- npm run start
+
 ## Technologies used
 - React
 - Javascript
